@@ -1,0 +1,18 @@
+plugins {
+    id "application"
+    id "java"
+    id "org.springframework.boot" version "2.4.0"
+}
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+    implementation project(":core")
+    implementation "org.springframework.boot:spring-boot-starter-jersey"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "org.glassfish.jersey.test-framework:jersey-test-framework-core:2.27"
+    testImplementation "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.27"
+}
+
+application {
+    mainClassName = "com.prolion.rest.Application"
+}
