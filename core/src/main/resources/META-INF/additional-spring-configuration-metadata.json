@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "prolion.service.dir",
+      "type": "java.lang.String",
+      "description": "Description for prolion.service.dir."
+    },
+    {
+      "name": "prolion.service.interval",
+      "type": "java.lang.String",
+      "description": "Description for prolion.service.interval."
+    },
+    {
+      "name": "prolion.service.maxDepth",
+      "type": "java.lang.String",
+      "description": "Description for prolion.service.maxDepth."
+    }
+  ] }

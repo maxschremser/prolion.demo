@@ -2,17 +2,21 @@ plugins {
     id "application"
     id "java"
     id "org.springframework.boot" version "2.4.0"
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 }
-apply plugin: 'io.spring.dependency-management'
 
 dependencies {
     implementation project(":core")
     implementation "org.springframework.boot:spring-boot-starter-jersey"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    implementation "org.springframework.boot:spring-boot-starter-web"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
     testImplementation "org.glassfish.jersey.test-framework:jersey-test-framework-core:2.27"
     testImplementation "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:2.27"
 }
-
+test {
+    useJUnitPlatform()
+}
 application {
     mainClassName = "com.prolion.rest.Application"
 }
